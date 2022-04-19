@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="36. Total salary and wage expenses"></app-subtitle>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Total salary and wage expenses action code (少属性)
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <select class="custom-select edgeControl">
+        <option *ngFor="let type of typeList1" [value]="type">{{type}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Total salary and wage expenses
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

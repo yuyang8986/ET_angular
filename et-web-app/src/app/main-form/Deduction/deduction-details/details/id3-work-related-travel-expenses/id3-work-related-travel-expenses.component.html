@@ -1,0 +1,55 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="D3. Work-related Travel Expenses"></app-subtitle>
+  </div>
+
+  <p>
+    For work-related travel costs other than using your car. Can include airfares, bus, train, taxi, meals and accommodation. 
+  </p>
+
+  <p>
+    Does not include travel between home and work. Only include items that you paid for yourself and were not repaid by your employer.
+  </p>
+  
+  <div class="rowWrapper" *ngFor="let index of expandArg">
+  <div class="row">
+      <div class="col-md-5">
+        <div class="form-group">
+          <label>
+            Type of travel expense
+          </label>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <select name="" class="form-control custom-select" class="form-control edgeControl">
+          <option *ngFor="let type of typeList1" [value]="type">{{type}}</option>
+        </select>
+      </div>    
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-5">
+        <h5>
+          Total amount you paid for this item
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="" class="edgeControl form-control">
+      </div>
+  </div>
+  </div>
+  
+
+  <div class="row" style="margin: 1em 1em">
+    <button (click)="addNewLines()" class="btn btn-primary btn-rounded">Add new lines</button>
+    <button (click)="removeOneLine()" class="btn btn-secondary btn-rounded offset-md-1">Remove one line</button>
+  </div>
+  
+
+</div>
+
+  
+
+<br>
+<hr>
+<br>

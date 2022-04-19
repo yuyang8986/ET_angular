@@ -1,0 +1,153 @@
+<div class="container" style="width:100%">    
+  <div class="row"><app-nav></app-nav></div><br><br><br><br>
+  <div class="row">
+  <div class="row" style="width:100%">
+    <div class="col-md-8">
+      <div class="card bg-light">
+          <div>            
+            <div *ngIf="getCurrentHour()" class="card-header">
+            <h2>
+             Good Morning, {{accountInfor?.firstName}}
+            </h2>
+            </div>         
+         
+            <div *ngIf="!getCurrentHour()" class="card-header">
+            <h2>Good Afternoon, 
+              {{accountInfor?.firstName}} 
+            </h2>
+            </div>
+          </div>
+          <div class="card-body">
+            <div>
+              <h3 *ngIf="toggle.startToggleYear1" class="card-title"><button (click)="addMainForm1()" routerLink="/mainForm/updateDetails" class="btn btn-lg btn-block  btn-success">Start</button></h3>
+              <h3 *ngIf="toggle.continueToggleYear1" class="card-title"><button (click)="setSessionYear(taxYear1)" routerLink="/mainForm/updateDetails" class="btn btn-lg btn-rounded btn-primary">Continue</button></h3>
+              <h3 *ngIf="toggle.viewDetailsToggleYear1" class="card-title"><button (click)="setSessionYear(taxYear1)" routerLink="/mainForm/updateDetails" class="btn btn-lg btn-rounded btn-info">View Details</button></h3>
+            </div>
+            <p class="card-text" style="font-size: 25px;">{{taxYear1}} Tax Return Now</p>
+            <!-- <p>现在{{currentHour}}点了</p> -->
+          </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card bg-light">     
+        <div class="card-body" *ngIf="emailVerified=='false'">
+          Your email has not been comfirmed
+          <br><br>
+          <button (click)="sendVerifyEmail()" class="btn btn-rounded btn-warning" type="button"> Verify your email</button>
+        </div>    
+      </div>
+    </div>
+  </div>
+  <br> <br>
+  <div class="row" style="width:100%">
+    <div class="col-md-12">
+      <div class="downTable">
+        <H4>Previous Years Return</H4>
+        <table class="table">
+            <thead>
+                <tr>                  
+                    <th scope="col">Year</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>                  
+                    <td>{{taxYear2}}</td>
+                    <div>
+                      <div *ngIf="status.notStartedYear2" class="alert alert-dark">Not Started</div>
+                      <div *ngIf="status.incompleteYear2" class="alert alert-warning">Incomplete</div>
+                      <div *ngIf="status.completedYear2" class="alert alert-success">Completed</div>
+                    </div>
+                    <td>
+                      <div *ngIf="toggle.startToggleYear2"><button (click)="addMainForm2()" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-success">Start</button></div>
+                      <div *ngIf="toggle.continueToggleYear2"><button (click)="setSessionYear(taxYear2)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-primary">Continue</button></div>
+                      <div *ngIf="toggle.viewDetailsToggleYear2"><button (click)="setSessionYear(taxYear2)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-info">View Details</button></div>
+                    </td>
+                </tr>
+                <tr>                   
+                    <td>{{taxYear3}}</td>
+                    <div>
+                      <div *ngIf="status.notStartedYear3" class="alert alert-dark">Not Started</div>
+                      <div *ngIf="status.incompleteYear3" class="alert alert-warning">Incomplete</div>
+                      <div *ngIf="status.completedYear3" class="alert alert-success">Completed</div>
+                    </div>
+                    <td>
+                      <div *ngIf="toggle.startToggleYear3"><button (click)="addMainForm3()" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-success">Start</button></div>
+                      <div *ngIf="toggle.continueToggleYear3"><button (click)="setSessionYear(taxYear3)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-primary">Continue</button></div>
+                      <div *ngIf="toggle.viewDetailsToggleYear3"><button (click)="setSessionYear(taxYear3)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-info">View Details</button></div>
+                    </td>
+                </tr>
+                <tr>                 
+                    <td>{{taxYear4}}</td>
+                    <div>
+                      <div *ngIf="status.notStartedYear4" class="alert alert-dark">Not Started</div>
+                      <div *ngIf="status.incompleteYear4" class="alert alert-warning">Incomplete</div>
+                      <div *ngIf="status.completedYear4" class="alert alert-success">Completed</div>
+                    </div>
+                    <td>
+                      <div *ngIf="toggle.startToggleYear4"><button (click)="addMainForm4()" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-success">Start</button></div>
+                      <div *ngIf="toggle.continueToggleYear4"><button (click)="setSessionYear(taxYear4)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-primary">Continue</button></div>
+                      <div *ngIf="toggle.viewDetailsToggleYear4"><button (click)="setSessionYear(taxYear4)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-info">View Details</button></div>
+                    </td>
+                </tr>
+                <tr>                   
+                    <td>{{taxYear5}}</td>
+                    <div>
+                      <div *ngIf="status.notStartedYear5" class="alert alert-dark">Not Started</div>
+                      <div *ngIf="status.incompleteYear5" class="alert alert-warning">Incomplete</div>
+                      <div *ngIf="status.completedYear5" class="alert alert-success">Completed</div>
+                    </div>
+                    <td>
+                      <div *ngIf="toggle.startToggleYear5"><button (click)="addMainForm5()" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-success">Start</button></div>
+                      <div *ngIf="toggle.continueToggleYear5"><button (click)="setSessionYear(taxYear5)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-primary">Continue</button></div>
+                      <div *ngIf="toggle.viewDetailsToggleYear5"><button (click)="setSessionYear(taxYear5)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-info">View Details</button></div>
+                    </td>
+                </tr>
+                <tr>                   
+                    <td>{{taxYear6}}</td>
+                    <div>
+                      <div *ngIf="status.notStartedYear6" class="alert alert-dark">Not Started</div>
+                      <div *ngIf="status.incompleteYear6" class="alert alert-warning">Incomplete</div>
+                      <div *ngIf="status.completedYear6" class="alert alert-success">Completed</div>
+                    </div>
+                    <td>
+                      <div *ngIf="toggle.startToggleYear6"><button (click)="addMainForm6()" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-success">Start</button></div>
+                      <div *ngIf="toggle.continueToggleYear6"><button (click)="setSessionYear(taxYear6)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-primary">Continue</button></div>
+                      <div *ngIf="toggle.viewDetailsToggleYear6"><button (click)="setSessionYear(taxYear6)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-info">View Details</button></div>
+                    </td>
+                </tr>
+                <tr>                
+                    <td>{{taxYear7}}</td>
+                    <div>
+                      <div *ngIf="status.notStartedYear7" class="alert alert-dark">Not Started</div>
+                      <div *ngIf="status.incompleteYear7" class="alert alert-warning">Incomplete</div>
+                      <div *ngIf="status.completedYear7" class="alert alert-success">Completed</div>
+                    </div>
+                    <td>
+                      <div *ngIf="toggle.startToggleYear7"><button (click)="addMainForm7()" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-success">Start</button></div>
+                      <div *ngIf="toggle.continueToggleYear7"><button (click)="setSessionYear(taxYear7)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-primary">Continue</button></div>
+                      <div *ngIf="toggle.viewDetailsToggleYear7"><button (click)="setSessionYear(taxYear7)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-info">View Details</button></div>
+                    </td>
+                </tr>
+                <tr>                   
+                    <td>{{taxYear8}}</td>
+                    <div>
+                      <div *ngIf="status.notStartedYear8" class="alert alert-dark">Not Started</div>
+                      <div *ngIf="status.incompleteYear8" class="alert alert-warning">Incomplete</div>
+                      <div *ngIf="status.completedYear8" class="alert alert-success">Completed</div>
+                    </div>
+                    <td>
+                      <div *ngIf="toggle.startToggleYear8"><button (click)="addMainForm8()" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-success">Start</button></div>
+                      <div *ngIf="toggle.continueToggleYear8"><button (click)="setSessionYear(taxYear8)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-primary">Continue</button></div>
+                      <div *ngIf="toggle.viewDetailsToggleYear8"><button (click)="setSessionYear(taxYear8)" routerLink="/mainForm/updateDetails" class="btn btn-rounded btn-info">View Details</button></div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

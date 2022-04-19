@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="row">
+    <app-subtitle mySubTitle="11. Employee Share Schemes (ESS)"></app-subtitle>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Discount from taxed upfront schemes - eligible for reduction
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="dftufsEligibleForReductionAmount" [(ngModel)]="retrievedSelfData.dftufsEligibleForReductionAmount" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Discount from taxed upfront schemes - not eligible for reduction
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="dftufsNotEligibleForReductionAmount" [(ngModel)]="retrievedSelfData.dftufsNotEligibleForReductionAmount" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Discount from deferral
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="discountFromDeferralSchemes" [(ngModel)]="retrievedSelfData.discountFromDeferralSchemes" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Discount on ESS Interests acquired before 01/07/2009 and 'cessation time' occurred during financial year
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="discountESSIntBef172009" [(ngModel)]="retrievedSelfData.discountESSIntBef172009" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Total assessable discount amount
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="totalAssesableDiscountAmout" [(ngModel)]="retrievedSelfData.totalAssesableDiscountAmout" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          ESS TFN amounts withheld from discounts
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="esstfnAmountsWithHeldFromDiscounts" [(ngModel)]="retrievedSelfData.esstfnAmountsWithHeldFromDiscounts" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Foreign source discounts
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="foreignSourceDiscounts" [(ngModel)]="retrievedSelfData.foreignSourceDiscounts" class="form-control edgeControl">
+    </div>
+  </div>
+
+<app-etfile-upload btnName="your employee share scheme statement (optional)" fileType="EmployeeShareSchemes" [downloadList]="EmployeeShareSchemesList"></app-etfile-upload>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

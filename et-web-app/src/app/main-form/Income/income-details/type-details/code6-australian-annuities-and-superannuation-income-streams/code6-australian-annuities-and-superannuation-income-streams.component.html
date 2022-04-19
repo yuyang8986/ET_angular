@@ -1,0 +1,88 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <!-- <div>my subtitle</div> -->
+    <app-subtitle mySubTitle="6. Australian Annuities And Superannuation Income Streams"></app-subtitle>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+          <h5>
+            Tax withheld from your Australian Annuities and Super Income Streams
+          </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="taxWithHeld" [(ngModel)]="retrievedSelfData.taxWithHeld" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>Taxable component - Taxed element</h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="taxableComponentTaxed" [(ngModel)]="retrievedSelfData.taxableComponentTaxed" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>Taxable component - Untaxed element</h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="taxableComponentUnTaxed" [(ngModel)]="retrievedSelfData.taxableComponentUnTaxed" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Assessable amount from capped defined benefit income stream
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="assessableAmountFromCappedDefinedBenefitIncomeStream" [(ngModel)]="retrievedSelfData.assessableAmountFromCappedDefinedBenefitIncomeStream" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Lump sum in arrears - Taxed element
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="lumpSumInArrearsTaxed" [(ngModel)]="retrievedSelfData.lumpSumInArrearsTaxed" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Lump sum in arrears - Untaxed element
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="lumpSumInArrearsUnTaxed" [(ngModel)]="retrievedSelfData.lumpSumInArrearsUnTaxed" class="form-control edgeControl">
+    </div>
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>
+

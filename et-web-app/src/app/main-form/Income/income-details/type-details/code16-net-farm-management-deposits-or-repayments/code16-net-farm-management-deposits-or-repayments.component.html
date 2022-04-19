@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="16. Net Farm Management Deposits or Repayments"></app-subtitle>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4">
+        <h5>
+          Deductible deposits
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="deductibleDeposits" [(ngModel)]="retrievedSelfData.deductibleDeposits" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4">
+        <h5>
+          Early repayments -natural disaster and drought
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="earlyRepaymentsNaturalDisasterAndDrought" [(ngModel)]="retrievedSelfData.earlyRepaymentsNaturalDisasterAndDrought" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4">
+        <h5>
+          Other repayments
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="otherRepayment" [(ngModel)]="retrievedSelfData.otherRepayment" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4">
+        <h5>
+          Net farm management deposits or repayments
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="netFarmManagementDepositsOrRepayments" [(ngModel)]="retrievedSelfData.netFarmManagementDepositsOrRepayments" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4">
+        <h5>
+          profit/loss
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <select class="custom-select edgeControl" [(ngModel)]="retrievedSelfData.isNetIncomeEqualisationProfit">
+          <option *ngFor="let type of typeList1" [value]="type.bol">{{type.value}}</option>
+        </select>
+      </div>
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

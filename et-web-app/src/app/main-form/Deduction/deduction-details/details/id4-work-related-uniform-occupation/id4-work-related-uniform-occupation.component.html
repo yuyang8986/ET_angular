@@ -1,0 +1,144 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="D4. Work-related Uniform, Occupation Specific or Protective Clothing"></app-subtitle>
+  </div>
+
+  <div class="rowWrapper" *ngFor="let index of expandArg">
+  <p>
+    Includes the purchase of work uniforms with logos, or protective clothing.
+    You are unable to claim ordinary clothing, business suits, etc.
+  </p>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Please confirm you have a receipt for each uniform item you are claiming below
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <div class="form-group">
+              <div class="custom-control custom-radio">
+                  <input type="radio" value="Yes" id="radio9" name="radio9" class="custom-control-input">
+                  <label class="custom-control-label" for="radio9">Yes</label>
+               </div>
+               <div class="custom-control custom-radio">
+                  <input type="radio" value="No" id="radio10" name="radio9" class="custom-control-input">
+                  <label class="custom-control-label" for="radio10">No</label>
+              </div>
+      </div>
+    </div>
+      <!--/span-->                          
+      <!--/span-->
+  </div>
+
+  <div class="row">
+    <div class="col-md-5">
+      <div class="form-group">
+        <label>
+          Type of clothing you bought
+        </label>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <select name="" class="form-control custom-select" class="form-control edgeControl">
+        <option *ngFor="let type of typeList1" [value]="type">{{type}}</option>
+      </select>
+    </div>    
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Total amount you paid for this item
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Your uniform expenses total is:
+      </h5>
+    </div>
+    <div class="col-md-5">
+      xxxxxxx
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <h3>
+      Laundry Expenses
+    </h3>
+  </div>
+
+  <p>
+    If you entered any work uniform above that you regularly wash, you can also usually claim the cost of laundering those items up to $150 per year.
+  </p>
+
+  <p>
+    Please complete the fields below and we will calculate your laundry claim for you.
+  </p>
+
+  <div class="row">
+    <div class="col-md-5">
+      <div class="form-group">
+        <label>
+          Please select whether you wash your uniform separately or mixed with other non-work clothes
+        </label>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <select name="" class="form-control custom-select" class="form-control edgeControl">
+        <option *ngFor="let type of typeList2" [value]="type">{{type}}</option>
+      </select>
+    </div>    
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Please enter how many loads of laundry you do per week
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        How many weeks of the year did you work? (don't include holidays, eg. for most people this is 48 weeks)
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Your uniform expenses total is:
+      </h5>
+    </div>
+    <div class="col-md-5">
+      xxxxxxx
+    </div>
+  </div>
+  </div>
+
+  <div class="row" style="margin: 1em 1em">
+    <button (click)="addNewLines()" class="btn btn-primary btn-rounded">Add new lines</button>
+    <button (click)="removeOneLine()" class="btn btn-secondary btn-rounded offset-md-1">Remove one line</button>
+  </div>
+
+
+
+  <app-etfile-upload btnName="a file (optional)" fileType="EmployeeShareSchemes" [downloadList]="workRelatedUniformList"></app-etfile-upload>
+
+</div>

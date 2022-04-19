@@ -1,0 +1,176 @@
+<div class="row">
+  <div class="col-lg-12">
+      <div class="card">
+          <div class="card-header bg-info">
+              <h4 class="m-b-0 text-white">Update your Account Information</h4>
+          </div>
+          <form #individualInforForm="ngForm" (ngSubmit)="onSubmit()" action="#">
+              <hr>
+
+              <div class="form-body">
+                  <div class="card-body">
+
+                      <div class="row p-t-20">
+                          <div class="col-md-12">
+                            <h4>Residency <button class="btn btn-primary" type="button" (click)="showModel()">show model</button></h4>
+                              <div class="form-group">
+                                  <label class="control-label">Is this the last Australian tax return you will lodge ? <app-myModal [myModalText]="modalText1"></app-myModal> </label>
+                                  <div class="custom-control custom-radio">
+                                      <input type="radio" [value]=true [(ngModel)]="model.isLastITRInAu" id="radio1" name="isLastITRInAu" class="custom-control-input">
+                                      <label class="custom-control-label" for="radio1">Yes</label>
+                                  </div>
+                                  <div class="custom-control custom-radio">
+                                      <input type="radio" [value]="false" [(ngModel)]="model.isLastITRInAu" id="radio2" name="isLastITRInAu" class="custom-control-input">
+                                      <label class="custom-control-label" for="radio2">No</label>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--/span-->
+                      </div>
+
+                      <div class="row p-t-20">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <label class="control-label">Do you have Australian Citizenship?</label>
+                                  <div class="custom-control custom-radio">
+                                      <input type="radio" [value]="true" [(ngModel)]="model.isAustralianCitizenship" id="radio3" name="isAustralianCitizenship" class="custom-control-input">
+                                      <label class="custom-control-label" for="radio3">Yes</label>
+                                  </div>
+                                  <div class="custom-control custom-radio">
+                                      <input type="radio" [value]="false" [(ngModel)]="model.isAustralianCitizenship" id="radio4" name="isAustralianCitizenship" class="custom-control-input">
+                                      <label class="custom-control-label" for="radio4">No</label>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--/span-->
+                      </div>
+
+                      <div class="row p-t-20">
+                          <div class="col-md-12">
+                              <div class="form-group">
+                                  <label class="control-label">Excluding holidays did you live Australia for the full tax year, 1July {{lastTaxYear}} – 30 June {{nowTaxYear}}?</label>
+                                  <div class="custom-control custom-radio">
+                                      <input type="radio" [value]="true" [(ngModel)]="model.isLiveFullYearInAu" id="radio5" name="isLiveFullYearInAu" class="custom-control-input">
+                                      <label class="custom-control-label" for="radio5">Yes</label>
+                                  </div>
+                                  <div class="custom-control custom-radio">
+                                      <input type="radio" [value]="false" [(ngModel)]="model.isLiveFullYearInAu" id="radio6" name="isLiveFullYearInAu" class="custom-control-input">
+                                      <label class="custom-control-label" for="radio6">No</label>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--/span-->
+                      </div>
+
+                  </div>
+
+                  <div class="card-body">
+                      <h4>Bank Account – For your tax refund <app-myModal [myModalText]="modalText2"></app-myModal> </h4>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>BSB Number</label>
+                                    <input [(ngModel)]="model.bsb" type="text" maxlength="6" id="bsb" name="bsb" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="!showBsbValidation()" style="color: red">
+                            <h5>* Your BSB should be 6 digits</h5>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label>Account Number</label>
+                                    <input [(ngModel)]="model.accountNo" type="text" maxlength="10" id="accountNo" name="accountNo" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="!showAccountNumberValidation()" style="color: red">
+                            <h5>* Your account number should be less than or equal to 10 digits</h5>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label>Name of Account Holder</label>
+                                    <input [(ngModel)]="model.accountName" type="text" id="accountName" name="accountName" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                  </div>
+
+
+                  <div class="card-body">
+
+                        <div class="row p-t-20">
+                            <div class="col-md-12">
+                              <h4>Education and other debts</h4>
+                                <div class="form-group">
+                                    <label class="control-label">Do you have any Higher Education Loan Programme(HELP) or Trade Support Loan (TSL) debt?</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" [value]="true" [(ngModel)]="model.hasHELPOrTSL" id="radio7" name="hasHELPOrTSL" class="custom-control-input">
+                                        <label class="custom-control-label" for="radio7">Yes</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" [value]="false" [(ngModel)]="model.hasHELPOrTSL" id="radio8" name="hasHELPOrTSL" class="custom-control-input">
+                                        <label class="custom-control-label" for="radio8">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+  
+                        <div class="row p-t-20">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="control-label">Do you have any Student Financial Supplement Scheme (SFSS) debt?</label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" [value]="true" [(ngModel)]="model.hasSFSS" id="radio9" name="hasSFSS" class="custom-control-input">
+                                        <label class="custom-control-label" for="radio9">Yes</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" [value]="false" [(ngModel)]="model.hasSFSS" id="radio10" name="hasSFSS" class="custom-control-input">
+                                        <label class="custom-control-label" for="radio10">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+  
+                        <div class="row p-t-20">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label class="control-label">Do you have any other tax-related debts (such as Child Support Debts or Family Tax Assistance Debts)? </label>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" [value]="true" [(ngModel)]="model.hasOtherTaxDebt" id="radio11" name="hasOtherTaxDebt" class="custom-control-input">
+                                        <label class="custom-control-label" for="radio11">Yes</label>
+                                    </div>
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" [value]="false" [(ngModel)]="model.hasOtherTaxDebt" id="radio12" name="hasOtherTaxDebt" class="custom-control-input">
+                                        <label class="custom-control-label" for="radio12">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+  
+                    </div>
+
+
+                  <div class="form-actions">
+                      <div class="card-body">
+                          <button type="button" routerLink="/mainForm/updateDetails" class="btn btn-dark">Back to last page</button>
+                          <button class="btn type='submit' btn-success offset-md-2">Save and Continue</button>
+                          <button routerLink="/dashboard" type="button" class="btn btn-dark offset-md-2">Back to dashboard</button>
+                      </div>
+                  </div>
+
+              </div>
+            </form>
+      </div>
+  </div>
+</div>
+
+                      

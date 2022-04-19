@@ -1,0 +1,165 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="23. Other income"></app-subtitle>
+  </div>
+
+  <div class="rowWrapper" *ngFor="let index of expandArg">
+  <div class="row align-items-center">
+      <div class="col-md-4">
+        <h5>
+          Other income type - Category 1 description
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Other income category one action code
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <select class="custom-select edgeControl">
+        <option *ngFor="let type of typeList1" [value]="type">{{type}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Assessable balancing adjustment amounts for a low value pool deduction relating to financial investments
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Assessable balancing adjustment amounts for a low value pool deduction relating to a rental property
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Other category 1 income
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Other income type - Category one - Amount
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Category 2 (ATO interest)
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Other income type - Category two - Amount
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Other income type - Category 3 description
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Other income category three action code 这里code只有一个，不知道属于哪个select
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <select class="custom-select edgeControl">
+        <option *ngFor="let type of typeList2" [value]="type">{{type}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Income from a financial investment not included at another label
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Other category 3 income
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Other income - Category three - Amount
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+  </div>
+
+  <div class="row" style="margin: 1em 1em">
+    <button (click)="addNewLines()" class="btn btn-primary btn-rounded">Add new lines</button>
+    <button (click)="removeOneLine()" class="btn btn-secondary btn-rounded offset-md-1">Remove one line</button>
+  </div>
+
+
+</div>
+
+<br>
+<hr>
+<br>

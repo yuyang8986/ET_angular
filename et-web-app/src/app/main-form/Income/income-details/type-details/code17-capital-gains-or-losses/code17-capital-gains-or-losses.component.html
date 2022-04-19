@@ -1,0 +1,138 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <app-subtitle mySubTitle="17. Capital gains or losses - for example, on disposal of assets"></app-subtitle>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Did you have a CGT event during the year?
+      </h5>
+    </div>
+    <div class="col-md-5">
+
+          <div class="form-group">
+                  <div class="custom-control custom-radio">
+                      <input type="radio" value="Yes" id="radio1" name="firstRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="radio1">Yes</label>
+                  </div>
+                  <div class="custom-control custom-radio">
+                      <input type="radio" value="No" id="radio2" name="firstRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="radio2">No</label>
+                  </div>
+          </div>
+
+    </div>
+      <!--/span-->                          
+      <!--/span-->
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-4">
+        <h5>
+          Did you have a CGT event during the year?
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group">
+                <div class="custom-control custom-radio">
+                    <input type="radio" value="Yes" id="radio3" name="secondRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="radio3">Yes</label>
+                 </div>
+                 <div class="custom-control custom-radio">
+                    <input type="radio" value="No" id="radio4" name="secondRadio" class="custom-control-input">
+                    <label class="custom-control-label" for="radio4">No</label>
+                </div>
+        </div>
+      </div>
+        <!--/span-->                          
+        <!--/span-->
+  </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-4">
+          <h5>
+            Have you applied an exemption or rollover - code
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <select class="custom-select edgeControl">
+            <option *ngFor="let type of typeList1" [value]="type">{{type}}</option>
+          </select>
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-4">
+          <h5>
+            Net capital gain 
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-4">
+          <h5>
+            Total current year capital gains
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-4">
+          <h5>
+            Net capital losses carried forward to later income years
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-4">
+          <h5>
+            Credit for foreign resident capital gains withholding amounts
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-4">
+          <h5>
+            Do you need to use a schedule
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <div class="form-group">
+                  <div class="custom-control custom-radio">
+                      <input type="radio" value="Yes" id="radio5" name="thirdRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="radio5">Yes</label>
+                   </div>
+                   <div class="custom-control custom-radio">
+                      <input type="radio" value="No" id="radio6" name="thirdRadio" class="custom-control-input">
+                      <label class="custom-control-label" for="radio6">No</label>
+                  </div>
+          </div>
+        </div>
+          <!--/span-->                          
+          <!--/span-->
+    </div>
+
+<app-etfile-upload btnName="a file" fileType="CapitalGainsOrLosses" [downloadList]="CapitalGainsOrLossesList"></app-etfile-upload>
+
+</div>
+
+<br>
+<hr>
+<br>

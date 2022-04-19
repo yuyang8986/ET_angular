@@ -1,0 +1,32 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="42. Trading stock election"></app-subtitle>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Partnership or sole trader
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <div class="form-group">
+            <div class="custom-control custom-radio">
+                <input type="radio" [(ngModel)]="retrievedSelfData.election" [value]="true" id="p19r1" name="p19election" class="custom-control-input">
+                <label class="custom-control-label" for="p19r1">Yes</label>
+             </div>
+             <div class="custom-control custom-radio">
+                <input type="radio" [(ngModel)]="retrievedSelfData.election" [value]="false" id="p19r2" name="p19election" class="custom-control-input">
+                <label class="custom-control-label" for="p19r2">No</label>
+            </div>
+      </div>
+    </div>
+      <!--/span-->                          
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

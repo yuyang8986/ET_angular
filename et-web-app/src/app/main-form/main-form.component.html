@@ -1,0 +1,109 @@
+<div class="container-fluid">
+	<div class="row" style="width:100%;">	
+		<app-nav></app-nav>
+	</div>
+<br><br><br><br>
+	<div class="row" style="width:100%;">
+    <div class="col-md-2">
+			<aside>
+				<div class="scroll-sidebar">
+					  <nav class="sidebar-nav">
+								<div class="scroll-sidebar">
+									<ul class="nav flex-column" id="sidebarnav">
+									<li class="nav-item">
+										<a class="nav-link active" routerLink='./updateDetails' href="#">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none"></svg>
+											<i class="far fa-edit"></i>
+											Details
+										</a>
+									</li>
+									<li class="nav-item">	
+										<a class="nav-link" routerLink='./myIncome' href="#">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"></svg>
+										<i class="fas fa-dollar-sign"></i>
+										Income
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" routerLink='./deductionTypes' href="#">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"></svg>
+										<i class="far fa-credit-card"></i>
+										Expense
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"></svg>
+										<i class="fas fa-briefcase"></i>
+										Others
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"></svg>
+										<i class="fas fa-search"></i>
+										Review
+										</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="#">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none"></svg>
+										<i class="fas fa-university"></i>
+										Lodge
+										</a>
+									</li>
+									</ul>
+								</div>
+							</nav>
+				</div>
+			</aside>
+		
+		</div>
+		
+		
+		<div class="col-md-7 form-content pre-scrollable" style="font-size:18px; min-height: 800px;overflow:scroll;">
+			<router-outlet></router-outlet>
+		</div>
+
+		<div class="col-md-3">
+
+			<br>
+
+			<div calss="row">
+				<div class="card">
+					<div class="d-flex flex-row">
+							<div class="p-10">
+									<h3 class="m-b-0">$xxxx</h3>
+									<span class="text-muted">In time calculation</span>
+							</div>
+							<div class="p-10 bg-inverse ml-auto">
+									<h3 class="text-white box m-b-0">
+											<i class="ti-timer"></i>
+									</h3>
+							</div>
+					</div>
+			  </div>	
+			</div>
+			<hr>
+
+			<div calss="row">
+				<div class="card">
+					<div class="d-flex flex-row">
+							<div class="p-10">
+									<h3 class="m-b-0">$xxxx</h3>
+									<span class="text-muted">In time calculation</span>
+							</div>
+							<div class="p-10 bg-inverse ml-auto">
+									<h3 class="text-white box m-b-0">
+											<i class="ti-timer"></i>
+									</h3>
+							</div>
+					</div>
+			  </div>	
+			</div>
+
+		</div>
+	
+
+	</div>
+</div>

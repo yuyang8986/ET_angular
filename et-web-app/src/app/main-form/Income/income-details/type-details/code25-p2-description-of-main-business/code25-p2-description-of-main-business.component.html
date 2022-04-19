@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="25(p2). Description of main business or professional activity"></app-subtitle>
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-4">
+        <h5>
+          Description of main business or professional activity
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="description" [(ngModel)]="retrievedSelfData.description" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Industry code
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="industryCode" [(ngModel)]="retrievedSelfData.industryCode" class="edgeControl form-control">
+    </div>
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

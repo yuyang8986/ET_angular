@@ -1,0 +1,58 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <app-subtitle mySubTitle="29 (p6). Business Address Of Main Business"></app-subtitle>
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-5">
+        <h5>
+          Business addresss of main business - Street name and number
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-5">
+        <h5>
+          Business address of main business - Suburb/Town
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-5">
+        <h5>
+          Business address of main bussiness - Postcode
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <select class="custom-select edgeControl">
+          <option *ngFor="let type of typeList1" [value]="type">{{type}}</option>
+        </select>
+      </div>
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-5">
+        <h5>
+          Business address of main business - State
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="" class="edgeControl form-control">
+      </div>
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

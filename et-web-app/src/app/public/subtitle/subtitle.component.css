@@ -1,0 +1,15 @@
+.myBackground {
+    background-color: black;
+    margin-bottom: 1%;
+}
+
+.mySubTitle {
+    color: white;
+    background-color: black;
+    margin-bottom: 5px
+}
+
+p {
+    text-align: center;
+    margin: 1px 10px
+}

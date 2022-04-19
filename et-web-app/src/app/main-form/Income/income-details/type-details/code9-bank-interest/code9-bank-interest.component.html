@@ -1,0 +1,31 @@
+<div class="container-fluid">
+    <div class="row">
+        <app-subtitle mySubTitle="9. Bank Interest"></app-subtitle>
+    </div>
+    
+    <div class="row">
+        <label>Sum of the interest you earned from all bank accounts. 
+                    If you have joint accounts, add only your share of the interest.
+        </label>
+    </div>
+
+        <div class="row">
+            <div class="form-group">
+                <h5>Total tax withheld from interest (if any)</h5>
+                <input  name="tax" [(ngModel)]="retrievedSelfData.tax" type="text" class="form-control">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group">
+                <h5>Total interest received</h5>
+                <input  name="total" [(ngModel)]="retrievedSelfData.total" type="text" class="form-control">
+            </div>
+        </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

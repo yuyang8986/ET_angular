@@ -1,0 +1,46 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <!-- <div>subtitle</div> -->
+    <app-subtitle mySubTitle="5. Australian Government Allowances"></app-subtitle>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 align-self-center">
+      <div class="form-group">
+        <h5>Please enter the type of allowance you received (eg. NewStart, Youth Allowance, Parenting Payment Partnered)</h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <textarea name="type" [(ngModel)]="retrievedSelfData.type" cols="40" rows="6" class=""></textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>Tax withheld from your Government allowances (if any)</h5>
+      </div>
+    </div>
+    <div class="col-md-5 edgeControl">
+      <input name="taxWithHeld" [(ngModel)]="retrievedSelfData.taxWithHeld" type="text" class="form-control">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>Total Government allowances you received</h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input name="totalAllowance" [(ngModel)]="retrievedSelfData.totalAllowance" type="text" class="form-control">
+    </div>
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

@@ -1,0 +1,257 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header bg-info">
+                <h4 class="m-b-0 text-white">Check and update your individual information</h4>
+            </div>
+            <form #individualInforForm="ngForm" (ngSubmit)="submit()" action="#">
+                <hr>
+                <div class="form-body">
+                    <div class="card-body">
+                        <div class="row p-t-20">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">First Name</label>
+                                    <input [(ngModel)]="model.firstName" type="text" id="firstName" name="firstName" class="form-control" placeholder="">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group has-danger">
+                                    <label class="control-label">Middle Name <span class="badge badge-success">Optional</span> </label>
+                                    <input [(ngModel)]="model.middleName" type="text" id="middleName" name="middleName" class="form-control form-control-danger" placeholder="">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group has-danger">
+                                    <label class="control-label">Last Name</label>
+                                    <input [(ngModel)]="model.lastName" type="text" id="lastName" name="lastName" class="form-control form-control-danger" placeholder="">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="control-label">Date of Birth</label>
+                                    <input type="date" [(ngModel)]="model.dateOfBirth" name="dateOfBirth" class="form-control" id="datePicker" placeholder="mm/dd/yyyy">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                        <label class="control-label">Gender</label>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" value="Male" [(ngModel)]="model.gender" id="radio1" name="gender" class="custom-control-input">
+                                            <label class="custom-control-label" for="radio1">Male</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" value="Female" [(ngModel)]="model.gender" id="radio2" name="gender" class="custom-control-input">
+                                            <label class="custom-control-label" for="radio2">Female</label>
+                                        </div>
+                                        <div class="custom-control custom-radio">
+                                            <input type="radio" value="Others" [(ngModel)]="model.gender" id="radio3" name="gender" class="custom-control-input">
+                                            <label class="custom-control-label" for="radio3">Others</label>
+                                        </div>
+                                </div>
+
+                            </div>
+                            <!--/span-->                          
+                            <!--/span-->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group has-danger">
+                                    <label class="control-label">Mobile</label>
+                                    <input [(ngModel)]="model.mobile" maxlength="10" name="mobile" type="text" id="mobile" class="form-control form-control-danger" placeholder="Type 10 numbers eg:1234567890">
+                                    <div *ngIf="!showMobileValidation()" style="color:red">" Please check your mobile input"</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group has-danger">
+                                    <label class="control-label">Home Phone(Code + Number) <span class="badge badge-success">Optional</span> </label>
+                                    <input [(ngModel)]="model.homePhone" name="homePhone" maxlength="10" type="text" id="homePhone" class="form-control form-control-danger" placeholder="2code + 8number eg: 1022222222">
+                                    <div *ngIf="!showPhoneValidation()" style="color:red">" Please Check your phone number(2 codes + 8 numbers eg: 0255555555)"</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/row-->
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group has-danger">
+                                    <label class="control-label">TFN</label>
+                                    <input [(ngModel)]="model.tfn" maxlength="9" name="tfn" type="text" id="TFN" class="form-control form-control-danger" placeholder="">
+                                    <div *ngIf="!showTfnValidation()" style="color:red">" Please check your TFN input"</div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="form-group has-danger">
+                                    <label class="control-label">Email</label>
+                                    <input [(ngModel)]="model.email" name="email" type="text" id="Email" class="form-control form-control-danger" placeholder="">
+                                    <div *ngIf="!showEmailValidation()" style="color:red">" Please check your email input"</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--/row-->
+
+                        <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group has-success">                                
+                                        <label class="control-label" style="width:100%;">What is your Occupation?</label>(It can help us to determine what deductions you may be eligible to claim.)
+                                            <div class="row"> 
+                                                <div class="col-md-12">
+                                                    <input [(ngModel)]="model.occupation" name="occupation" type="text" autocomplete [config]="config2" [items]="occupationArray" (inputChangedEvent)="onInputChangedEvent($event)" (selectEvent)="onSelect($event)" class="form-control form-control-danger">
+                                                </div>                                                   
+                                            </div>                                            
+                                    </div>
+                                </div>
+                        </div>
+                       
+
+                        <h4 class="card-title m-t-40">Home Address <app-myModal [myModalText]="modalText1"></app-myModal> </h4>
+                        <button type="button" (click)="showModel()">show model</button>
+                    </div>
+                    <hr>
+                    
+                    <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-10 ">
+                                    <div class="form-group">
+                                        <label>Address autocomplete <span class="badge badge-success">Optional</span> </label>
+                                        <input class="col-md-9" name='location' (onAddressChange)="handleAddressChange($event)" ngx-google-places-autocomplete [options]="{
+                                            types: [],
+                                            componentRestrictions: { country: 'Aus' }
+                                            }">
+                                    </div>
+                                </div>
+                            </div>
+
+                        <div class="row">
+                            <div class="col-md-10 ">
+                                <div class="form-group">
+                                    <label>Street</label>
+                                    <input [(ngModel)]="model.homeAddressStreet" name="homeAddressStreet" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <input [(ngModel)]="model.homeAddressCity" name="homeAddressCity" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>State</label>
+                                    <input [(ngModel)]="model.homeAddressState" name="homeAddressState" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Post Code</label>
+                                    <input [(ngModel)]="model.homeAddressPostCode" name="homeAddressPostCode" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <select name="homeAddressCountry" [(ngModel)]="model.homeAddressCountry" class="form-control custom-select">
+                                        <option *ngFor="let personalCountry of countryList" [value]="personalCountry">{{personalCountry}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Is your postal address same with your home address?</label>
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-2">
+                                <button type="button" (click)="copyInfor()" class="btn btn-primary">Yes</button>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" (click)="changeBtnToggle()" class="btn btn-primary">No</button>
+                            </div>
+                        </div>
+                        <h4 class="card-title m-t-40">Postal Address</h4>
+                    </div>
+
+                    <div class="card-body" [hidden]="btnToggle">
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="form-group">
+                                    <label>Street</label>
+                                    <input [(ngModel)]="model.postalAddressStreet" name="postalAddressStreet" type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <input [(ngModel)]="model.postalAddressCity" name="postalAddressCity" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>State</label>
+                                    <input [(ngModel)]="model.postalAddressState" name="postalAddressState" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                        <!--/row-->
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Post Code</label>
+                                    <input [(ngModel)]="model.postalAddressPostCode" name="postalAddressPostCode" type="text" class="form-control">
+                                </div>
+                            </div>
+                            <!--/span-->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Country</label>
+                                    <select name="postalAddressCountry" [(ngModel)]="model.postalAddressCountry" class="form-control custom-select">
+                                        <option *ngFor="let postalCountry of countryList" [value]="postalCountry">{{postalCountry}}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--/span-->
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <div class="card-body">
+                            <button routerLink="/mainForm/basicDetails" type="button" class="btn btn-dark">Continue without update</button>
+                            <button routerLink="/dashboard" type="button" class="btn btn-dark offset-md-1">Back to dashboard</button>
+                            <button type="submit" [disabled]="!showAllValidation()" class="btn btn-success offset-md-3">Update and continue</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

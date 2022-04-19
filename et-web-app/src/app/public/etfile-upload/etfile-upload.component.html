@@ -1,0 +1,40 @@
+<hr>
+<div class="row">
+  <h5 style="color: rgb(85, 190, 138)">Your file can be uploaded below</h5>
+</div>
+
+<div class="row fileWrapper">
+  <div class="custom-file col-md-6 form-group">
+    <input type="file" onclick="this.value=''" (change)="onFilePicked($event)" class="custom-file-input is-valid" id="fileUpload" aria-describedby="inputGroupFileAddon01">
+    <label class="custom-file-label fileLabel" for="fileUpload">{{fileName}}</label>
+  </div>
+
+  <div class="col-md-1 align-self-center">
+    <i (click)="removeFile()" class="fas fa-minus-circle removeFile" *ngIf="this.pickedFile"></i>
+  </div>
+
+  <div class="col-md-5">
+    <button (click)="onUpload()" class="btn btn-rounded btn-success" type="button">Attatch {{btnName}}</button>
+  </div>
+</div>
+
+<div class="row" *ngIf="pitch">
+  <div class="col-md-5">
+    <label style="color:red">
+      {{pitch}}
+    </label>
+  </div>
+</div>
+
+<div class="row">
+    <div class="card text-center">
+        <div class="card-header">
+          File upload history
+        </div>
+        <div class="card-body myCd">
+          <p *ngFor="let file of downloadList">
+            <a href="{{file}}" style="font-size: 0.7em" class="myLink">{{file}}</a>
+          </p>
+        </div>
+    </div>
+</div>

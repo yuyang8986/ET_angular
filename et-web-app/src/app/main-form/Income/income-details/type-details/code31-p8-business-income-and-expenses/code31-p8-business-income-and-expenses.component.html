@@ -1,0 +1,413 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="31 (p8). Business income and expenses"></app-subtitle>
+  </div>
+
+  <div class="row">
+    <button>Farming Production</button>
+    <button class="offset-md-1">Non-farming Production</button>
+  </div>
+
+  <div>
+    <div class="row edgeControl">
+      <h4>
+        Income
+      </h4>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Gross payments where Australian business number not quoted
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Gross payments voluntary agreement
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Gross payments labour hire or other specified payments
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Assessable government industry payments
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Assessable government industry payments action code
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <select class="custom-select edgeControl">
+            <option *ngFor="let type of typeList1" [value]="type">{{type}}</option>
+          </select>
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Other business income
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Other business income profit/loss
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <select class="custom-select edgeControl">
+            <option *ngFor="let type of typeList2" [value]="type">{{type}}</option>
+          </select>
+        </div>
+    </div>
+
+  </div>
+  <hr>
+  <br>
+
+  <div>
+      <div class="row">
+        <h4>
+          Expenses
+        </h4>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Opening stock
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Purchases and other costs
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Closing stock
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Closing stock action code
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <select class="custom-select edgeControl">
+              <option *ngFor="let type of typeList3" [value]="type">{{type}}</option>
+            </select>
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Contractor, sub-contractor and commission expenses
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Superannuation expenses
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Bad debts
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Lease expenses
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Rent expenses
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Interest expenses within Australia
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Interest expenses overseas
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Depreciation expenses
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Motor vehicle expenses
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Motor vehicle expenses action code
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <select class="custom-select edgeControl">
+              <option *ngFor="let type of typeList4" [value]="type">{{type}}</option>
+            </select>
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              Repairs and maintenance
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+      <div class="row align-items-center">
+          <div class="col-md-5">
+            <h5>
+              All other expenses
+            </h5>
+          </div>
+          <div class="col-md-5">
+            <input type="text" name="" class="edgeControl form-control">
+          </div>
+      </div>
+
+  </div>
+  <hr>
+  <br>
+
+  <div>
+    <div class="row">
+      <h4>
+        Reconciliation items
+      </h4>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Section 40 - 880 deduction
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Business duduction for project pool
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Landcare operations and business deduction for decline in value or water facility
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+    
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Income reconciliation adjustments
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Income reconciliation adjustments profit/loss
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <select class="custom-select edgeControl">
+            <option *ngFor="let type of typeList5" [value]="type">{{type}}</option>
+          </select>
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Expense reconciliation adjustments
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Expense reconciliation adjustments profit/loss
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <select class="custom-select edgeControl">
+            <option *ngFor="let type of typeList6" [value]="type">{{type}}</option>
+          </select>
+        </div>
+    </div>
+
+
+  </div>
+  <hr>
+  <br>
+
+  <div>
+    <div class="row">
+      <h4>
+        Prior year amounts
+      </h4>
+    </div>
+
+    <div class="row align-items-center">
+        <div class="col-md-5">
+          <h5>
+            Deferred non-commercial losses from a prior year
+          </h5>
+        </div>
+        <div class="col-md-5">
+          <input type="text" name="" class="edgeControl form-control">
+        </div>
+    </div>
+
+  </div>
+
+<app-etfile-upload btnName="a file" fileType="businessIncomeAndExpensesNonFarming" [downloadList]="p8List"></app-etfile-upload>
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

@@ -1,0 +1,17 @@
+span {
+    background-color: black;
+    margin-bottom: 1%;
+}
+
+.mySubTitle {
+    color: white
+}
+
+p {
+    text-align: center;
+    margin: 1px 10px
+}
+
+.edgeControl {
+    margin-bottom: 20px
+}

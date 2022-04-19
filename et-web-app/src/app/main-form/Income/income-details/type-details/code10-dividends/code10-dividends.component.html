@@ -1,0 +1,63 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="10. Dividends"></app-subtitle>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          TFN amounts withheld from dividends
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="tFNWithHeld" [(ngModel)]="retrievedSelfData.tfnWithHeld" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Unfranked amount
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="unfranked" [(ngModel)]="retrievedSelfData.unfranked" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Franked amount
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="franked" [(ngModel)]="retrievedSelfData.franked" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+      <div class="col-md-4">
+        <div class="form-group">
+          <h5>
+            Franking credit
+          </h5>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="frankingCredit" [(ngModel)]="retrievedSelfData.frankingCredit" class="form-control edgeControl">
+      </div>
+    </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

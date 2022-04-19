@@ -1,0 +1,129 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="32. Business loss activity details"></app-subtitle>
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-5">
+        <h5>
+          Description of activity
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-5">
+        <h5>
+          Industry code
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Partnership or sole trader
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <div class="form-group">
+              <div class="custom-control custom-radio">
+                  <input type="radio" value="Partnership" id="p9r1" name="p9r1" class="custom-control-input">
+                  <label class="custom-control-label" for="p9r1">Partnership</label>
+               </div>
+               <div class="custom-control custom-radio">
+                  <input type="radio" value="Sole trader" id="p9r2" name="p9r1" class="custom-control-input">
+                  <label class="custom-control-label" for="p9r2">Sole trader</label>
+              </div>
+              <div class="custom-control custom-radio">
+                <input type="radio" value="None" id="p9r3" name="p9r1" class="custom-control-input">
+                <label class="custom-control-label" for="p9r3">None</label>
+            </div>
+      </div>
+    </div>
+      <!--/span-->                          
+      <!--/span-->
+  </div>
+  
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Type of loss
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <select class="custom-select edgeControl">
+        <option *ngFor="let type of typeList1" [value]="type">{{type}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Reference for code 5
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <select class="custom-select edgeControl">
+        <option *ngFor="let type of typeList2" [value]="type">{{type}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Year
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Number
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Deferred non-commercial loss from a prior year
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-5">
+      <h5>
+        Net loss amount
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="" class="edgeControl form-control">
+    </div>
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

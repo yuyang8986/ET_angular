@@ -1,0 +1,98 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="7. Australian Superannuation Lump Sum Payments"></app-subtitle>
+  </div>
+
+  <div class="rowWrapper" *ngFor="let index of expandArg; let i = index">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <div class="h5">
+          Date of payments
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input name="dateOfPayment" [(ngModel)]="retrievedSelfData[i].dateOfPayment" type="date" class="form-control edgeControl" placeholder="mm/dd/yyyy">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Payer's ABN
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="payerAbn" [(ngModel)]="retrievedSelfData[i].payerABN" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Tax withheld amount
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="taxWithHeld" [(ngModel)]="retrievedSelfData[i].taxWithHeld" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Taxable component - Taxed element
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="taxableComponentTaxedElement" [(ngModel)]="retrievedSelfData[i].taxableComponentTaxedElement" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <h5>
+          Taxable component - Untaxed element
+        </h5>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="taxableComponentUntaxedElement" [(ngModel)]="retrievedSelfData[i].taxableComponentUntaxedElement" class="form-control edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="form-group">
+        <label>
+          Description -please select 属性漏了
+        </label>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <select name="" class="form-control custom-select" class="form-control edgeControl">
+        <option *ngFor="let type of typeList" [value]="type">{{type}}</option>
+      </select>
+    </div>    
+  </div>
+  </div>
+
+  <div class="row" style="margin: 1em 1em">
+    <button (click)="addNewLines()" class="btn btn-primary btn-rounded">Add new lines</button>
+    <button (click)="removeOneLine()" class="btn btn-secondary btn-rounded offset-md-1">Remove one line</button>
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

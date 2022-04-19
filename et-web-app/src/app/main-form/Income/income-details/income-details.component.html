@@ -1,0 +1,53 @@
+<app-myModal [myModalText]="modalText1"></app-myModal>
+
+<app-subtitle></app-subtitle>
+<app-code1-salary #id1></app-code1-salary>
+<app-code2-allowance-earnings #id2></app-code2-allowance-earnings>
+<app-code3-employer-lump-sum-payment #id3></app-code3-employer-lump-sum-payment>
+<app-code4-employment-termination-payments #id4></app-code4-employment-termination-payments>
+<app-code5-australian-government-allowances #AGA></app-code5-australian-government-allowances>
+<app-code6-australian-annuities-and-superannuation-income-streams #AAASIS></app-code6-australian-annuities-and-superannuation-income-streams>
+<app-code7-australian-superannuation-lump-sum-payments #ASLSP></app-code7-australian-superannuation-lump-sum-payments>
+<app-code8-attributed-personal-services-income #APSI></app-code8-attributed-personal-services-income>
+<app-code9-bank-interest #bankInterest></app-code9-bank-interest>
+<app-code10-dividends #dividends></app-code10-dividends>
+<app-code11-employee-share-schemes #ESS></app-code11-employee-share-schemes>
+<app-code12-partnerships-and-trusts #partnershipsAndTrusts></app-code12-partnerships-and-trusts>
+<app-code14-net-income-or-loss-from-business></app-code14-net-income-or-loss-from-business>
+<app-code15-deferred-non-commercial-business-losses></app-code15-deferred-non-commercial-business-losses>
+<app-code16-net-farm-management-deposits-or-repayments #id16></app-code16-net-farm-management-deposits-or-repayments>
+<app-code17-capital-gains-or-losses></app-code17-capital-gains-or-losses>
+<app-code18-foreign-entities></app-code18-foreign-entities>
+<app-code19-foreign-source-income></app-code19-foreign-source-income>
+<app-code20-rent></app-code20-rent>
+<app-code21-bflicafs></app-code21-bflicafs>
+<app-code22-forestry-managed-investment-scheme-income></app-code22-forestry-managed-investment-scheme-income>
+<app-code23-other-income></app-code23-other-income>
+<app-code24-personal-services-income #P1></app-code24-personal-services-income>
+<app-code25-p2-description-of-main-business #p2></app-code25-p2-description-of-main-business>
+<app-code26-p3-number-of-business-activities #p3></app-code26-p3-number-of-business-activities>
+<app-code27-p4-status-of-your-business #p4></app-code27-p4-status-of-your-business>
+<app-code28-p5-business-name-of-main-business #p5></app-code28-p5-business-name-of-main-business>
+<app-code29-p6-business-address-of-main-business #p6></app-code29-p6-business-address-of-main-business>
+<app-code30-p7-goods-or-services-by-interest #p7></app-code30-p7-goods-or-services-by-interest>
+<app-code31-p8-business-income-and-expenses #p8></app-code31-p8-business-income-and-expenses>
+<app-code32-p9-business-loss-activity-details #p9></app-code32-p9-business-loss-activity-details>
+<app-code33-p10-small-business-entity-depreciating-assets #p10></app-code33-p10-small-business-entity-depreciating-assets>
+<app-code34-p11-trade-debtors #p11></app-code34-p11-trade-debtors>
+<app-code35-p12-trade-creditors #p12></app-code35-p12-trade-creditors>
+<app-code36-p13-total-salary-and-wage-expenses #p13></app-code36-p13-total-salary-and-wage-expenses>
+<app-code37-p14-payments-to-associated-persons #p14></app-code37-p14-payments-to-associated-persons>
+<app-code38-p15-intangible-depreciating-assets-first-deducted #p15></app-code38-p15-intangible-depreciating-assets-first-deducted>
+<app-code39-p16-other-depreciating-assets-first-deducted #p16></app-code39-p16-other-depreciating-assets-first-deducted>
+<app-code40-p17-termination-value-of-intangible-depreciating-asset #p17></app-code40-p17-termination-value-of-intangible-depreciating-asset>
+<app-code41-p18-termination-value-of-other-depreciating-assets #p18></app-code41-p18-termination-value-of-other-depreciating-assets>
+<app-code42-p19-trading-stock-election #p19></app-code42-p19-trading-stock-election>
+
+<br>
+<hr>
+父组件
+<div class="container-fluid">
+    <button (click)="model=salary.model;" type="button">Collect child component infor</button>
+    <button (click)="showModel()" class="offset-md-1" type="button">show model</button>
+    <button class="offset-md-1 btn btn-success" type="button" (click)="onUpdate()">update</button>
+</div>

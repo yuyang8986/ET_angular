@@ -1,0 +1,43 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <app-subtitle mySubTitle="2. Allowance Earnings"></app-subtitle>
+  </div>
+
+  <div class="rowWrapper" *ngFor="let index of expandArg; let i = index">
+  <div class="row">
+    
+        <div class="form-group">
+            <label>Type of allowance listed on PAYG summary</label>
+            <select name="allowanceType" [(ngModel)]="retrievedSelfData[i].allowanceType" class="form-control custom-select">
+                <option *ngFor="let type of typeList" [value]="type">{{type}}</option>
+            </select>
+        </div>
+    
+    <!--/span-->
+  </div>
+
+  <div class="row">
+      <div class="form-group">
+          <h5>Allowance amount received</h5>
+          <input  name="amount" [(ngModel)]="retrievedSelfData[i].amount" type="text" class="form-control">
+      </div>
+  </div>
+  </div>
+
+  <div class="row" style="margin: 1em 1em">
+      <button (click)="addNewLines()" class="btn btn-primary btn-rounded">Add new lines</button>
+      <button (click)="removeOneLine()" class="btn btn-secondary btn-rounded offset-md-1">Remove one line</button>
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>
+
+<!-- <label>Type of allowance listed on PAYG summary</label>
+            <select name="homeAddressCountry" [(ngModel)]="model.homeAddressCountry" class="form-control custom-select">
+                <option *ngFor="let personalCountry of countryList" [value]="personalCountry">{{personalCountry}}</option>
+            </select> -->

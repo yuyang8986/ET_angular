@@ -1,0 +1,139 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="14. Net Income Or Loss From Business"></app-subtitle>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+         <h5>
+           Net income or loss from carrying on a business of investing
+         </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="netIncomeOrLossFromBusinessAmount" [(ngModel)]="retrievedSelfData.netIncomeOrLossFromBusinessAmount" class="edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h5>
+        profit/loss
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <select class="custom-select edgeControl" [(ngModel)]="retrievedSelfData.isNetIncomeOrLossFromBusinessAmountProfit">
+        <option *ngFor="let type of typeList1" [value]="type.bol">{{type.value}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+         <h5>
+           Net income or loss from carrying on a rental property business
+         </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="netIncomeOrLossFromRentalPropertyBusiness" [(ngModel)]="retrievedSelfData.netIncomeOrLossFromRentalPropertyBusiness" class="edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h5>
+        profit/loss
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <select class="custom-select edgeControl" [(ngModel)]="retrievedSelfData.isNetIncomeOrLossFromRentalPropertyBusinessProfit">
+        <option *ngFor="let type of typeList2" [value]="type.bol">{{type.value}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+         <h5>
+           Other income or loss relating to item 15
+         </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="otherIncomeOrLossToItem15" [(ngModel)]="retrievedSelfData.otherIncomeOrLossToItem15" class="edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h5>
+        profit/loss
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <select class="custom-select edgeControl" [(ngModel)]="retrievedSelfData.isOtherIncomeOrLossToItem15">
+        <option *ngFor="let type of typeList3" [value]="type.bol">{{type.value}}</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+         <h5>
+           Net small business income
+         </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="netSmallBusinessIncome" [(ngModel)]="retrievedSelfData.netSmallBusinessIncome" class="edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+         <h5>
+           Net income/loss from business tax withheld voluntary agreement
+         </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="netIncomeLossFromBusinessTaxWithheldVoluntaryAgreement" [(ngModel)]="retrievedSelfData.netIncomeLossFromBusinessTaxWithheldVoluntaryAgreement" class="edgeControl">
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-md-4">
+         <h5>
+           Net income/loss from business tax withheld where Australian business number not quoted
+         </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="netIncomeLossFromBusinessTaxWithheldABNNotQuoted" [(ngModel)]="retrievedSelfData.netIncomeLossFromBusinessTaxWithheldABNNotQuoted" class="edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+         <h5>
+           Net income/loss from business tax withheld - foreign resident withholding (excluding capital gains)
+         </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="netIncomeLossFromBusinessTaxWithheldForeignResidentWithholdingExcludingCG" [(ngModel)]="retrievedSelfData.netIncomeLossFromBusinessTaxWithheldForeignResidentWithholdingExcludingCG" class="edgeControl">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+         <h5>
+           Net income/loss from business tax withheld -labour hire or other specified payments
+         </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="netIncomeLossFromBusinessTaxWithheldLabourHireOrOtherSpecifiedPayments" [(ngModel)]="retrievedSelfData.netIncomeLossFromBusinessTaxWithheldLabourHireOrOtherSpecifiedPayments" class="edgeControl">
+    </div>
+  </div>
+
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

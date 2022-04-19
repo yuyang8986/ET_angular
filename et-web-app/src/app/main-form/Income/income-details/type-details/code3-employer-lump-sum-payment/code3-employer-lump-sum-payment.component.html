@@ -1,0 +1,55 @@
+<div class="container">
+
+  <div class="row">
+      <app-subtitle mySubTitle="3. Employer Lump Sum Payment"></app-subtitle>
+  </div>
+
+  <div class="rowWrapper" *ngFor="let index of expandArg; let i = index">
+
+    <div class="row">
+      <div class="form-group">
+          <h5>Tax withheld from lump sum</h5>
+          <input  name="taxWithHeld" [(ngModel)]="retrievedSelfData[i].taxWithHeld" type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+          <h5>Amount A in lump sum payments box</h5>
+          <input  name="amountA" [(ngModel)]="retrievedSelfData[i].amountA" type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="row">
+      
+      <div class="form-group">
+        <label>Lump sum payment type code box</label>
+        <select name="code" [(ngModel)]="retrievedSelfData[i].code" class="form-control custom-select">
+          <option *ngFor="let type of typeList" [value]="type">{{type}}</option>
+        </select>
+      </div>
+    <!--/span-->
+    </div>
+
+    <div class="row">
+      <div class="form-group">
+          <h5>Full Amount B in lump sum payments box</h5>
+          <input  name="fullAmountB" [(ngModel)]="retrievedSelfData[i].fullAmountB" type="text" class="form-control">
+      </div>
+    </div>
+</div>
+
+<div class="row" style="margin: 1em 1em">
+  <button (click)="addNewLines()" class="btn btn-primary btn-rounded">Add new lines</button>
+  <button (click)="removeOneLine()" class="btn btn-secondary btn-rounded offset-md-1">Remove one line</button>
+</div>
+
+<app-etfile-upload btnName="employer lump sum PAYG statement(option)" fileType="EmployerLumpSumPayment" [downloadList]="EmployerLumpSumPaymentList"></app-etfile-upload>
+
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

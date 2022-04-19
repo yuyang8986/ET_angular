@@ -1,0 +1,22 @@
+.fileWrapper {
+    margin-top: 1%;
+    margin-bottom: 2%
+}
+
+.removeFile:hover {
+    color: orange
+}
+
+.myCd {
+    
+    background-color: rgb(240, 232, 221)
+}
+
+.myLink {
+    color: black;
+}
+
+.myLink:hover {
+    color: orange
+}
+

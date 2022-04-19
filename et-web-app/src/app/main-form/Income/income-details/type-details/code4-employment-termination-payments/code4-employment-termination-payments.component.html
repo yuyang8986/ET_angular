@@ -1,0 +1,70 @@
+<div class="container-fluid">
+  
+  <div class="row mySubTitle">
+    <span><p>4. Employment Termination Payments</p></span>
+  </div>
+
+  <div class="rowWrapper" *ngFor="let index of expandArg; let i = index">
+  <div class="row">
+    <div class="col-md-3 edgeControl">
+      <h5>Date of payment: </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="date" [(ngModel)]="retrievedSelfData[i].dateOfPayment" placeholder="mm/dd/yyyy" name="dateOfPayment" class="form-control">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 edgeControl">
+      <h5>Payer's ABN</h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="aBN" [(ngModel)]="retrievedSelfData[i].abn" class="form-control">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 edgeControl">
+      <h5>Tax withheld amount</h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="taxWithHeld" [(ngModel)]="retrievedSelfData[i].taxWithHeld" class="form-control">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 edgeControl">
+      <h5>Taxable component</h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="taxableComponent" [(ngModel)]="retrievedSelfData[i].taxableComponent" class="form-control">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-3 edgeControl">
+      <h5>ETP code</h5>
+    </div>
+    <div class="col-md-5">
+      <div class="form-group">
+        <select name="code" [(ngModel)]="retrievedSelfData[i].code"  class="form-control custom-select">
+            <option *ngFor="let type of typeList" [value]="type">{{type}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="row" style="margin: 1em 1em">
+    <button (click)="addNewLines()" class="btn btn-primary btn-rounded">Add new lines</button>
+    <button (click)="removeOneLine()" class="btn btn-secondary btn-rounded offset-md-1">Remove one line</button>
+  </div>
+
+<app-etfile-upload btnName="Your ETP PAYG statement (optional)" fileType="EmploymentTerminationPayments" [downloadList]="EmploymentTerminationPaymentsList"></app-etfile-upload>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

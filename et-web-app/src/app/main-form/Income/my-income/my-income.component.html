@@ -1,0 +1,46 @@
+<div class="container-fluid">
+  <br>
+  <div class="row">
+      <h3>Now, Select what types of Income you have received for {{lastTaxYear}} Financial Year (1/7/{{lastTaxYear}} to 30/6/{{nowTaxYear}})
+          <button type="button" (click)="showModel()" class="btn btn-primary">Show income type</button>
+      </h3>
+  </div>
+
+
+  <ul class="ks-cboxtags">
+    <li *ngFor="let detailType of tenCommonTypes; let i = index">
+      <input [id]="detailType.incomeTypeId" type="checkbox" [(ngModel)]="tenCommonTypes[i].checked">
+      <label style="margin:15px" [for]="detailType.incomeTypeId">{{detailType.description}}</label>
+    </li>
+  </ul>
+  <div class="row" style="padding:1em 3em">
+    <button type="button" id="toogleBtn1" (click)="onClick()" class="btn btn-block btn-rounded btn-primary">Show {{btnName1}}</button>
+  </div>
+  <hr>
+
+  <div id="hiddenDiv1" style="display:none">
+
+      <ul class="ks-cboxtags">
+        <li *ngFor="let detailType of cloneIncomeType; let i = index">
+          <input [id]="detailType.incomeTypeId" type="checkbox" [(ngModel)]="cloneIncomeType[i].checked">
+          <label style="margin:15px" [for]="detailType.incomeTypeId">{{detailType.description}}</label>
+        </li>
+      </ul>
+
+      <ul class="ks-cboxtags">
+        <li *ngFor="let detailType of twoTypes; let i = index">
+          <input [id]="detailType.incomeTypeId" type="checkbox" [(ngModel)]="twoTypes[i].checked">
+          <label style="margin:15px" [for]="detailType.incomeTypeId">{{detailType.description}}</label>
+        </li>
+      </ul>
+
+  </div>
+
+
+  <div class="form-actions">
+    <div class="card-body">
+    <button routerLink="/dashboard" type="button" class="btn btn-dark">Back to dashboard</button>
+    <button (click)="onSubmit()" class="btn btn-success offset-md-2">Save and Continue</button>
+    </div>
+  </div>
+</div>

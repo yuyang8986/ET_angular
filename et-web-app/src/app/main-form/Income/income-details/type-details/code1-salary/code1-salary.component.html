@@ -1,0 +1,52 @@
+<div class="container-fluid">
+
+  <div class="row">
+    <app-subtitle mySubTitle="1. Salary/Wages"></app-subtitle>
+  </div>
+
+  <div class="row rowWrapper" *ngFor="let index of expandArg; let i = index">
+      <div class="col-md-3">
+          <div class="form-group">
+              <h5>ABN</h5>
+              <input  name="aBN" [(ngModel)]="retrievedSelfData[i].abn" type="text" class="form-control">
+          </div>
+      </div>
+      <!--/span-->
+      <div class="col-md-3">
+          <div class="form-group">
+              <h5>Payer Name</h5>
+              <input  name="payerName" [(ngModel)]="retrievedSelfData[i].payerName" type="text" class="form-control">
+          </div>
+      </div>
+      <!--/span-->
+      <div class="col-md-3">
+          <div class="form-group">
+              <h5>TotalTaxWithHeld</h5>
+              <input  name="totalTaxWithHeld" [(ngModel)]="retrievedSelfData[i].totalTaxWithHeld" type="text" class="form-control">
+          </div>
+      </div>
+      <!--/span-->
+      <div class="col-md-3">
+          <div class="form-group">
+              <h5>GrossPayment</h5>
+              <input  name="grossPayment" [(ngModel)]="retrievedSelfData[i].grossPayment" type="text" class="form-control">
+          </div>
+      </div>
+      <!--/span-->
+  </div>
+
+  <!--/span-->
+  <div class="row" style="margin: 1em 1em">
+    <button (click)="addNewLines()" class="btn btn-primary btn-rounded">Add new lines</button>
+    <button (click)="removeOneLine()" class="btn btn-secondary btn-rounded offset-md-1">Remove one line</button>
+  </div>
+
+  <app-etfile-upload btnName="PAYG summaries" fileType="PAYGSummary" [downloadList]="PAYGSummaryList"></app-etfile-upload>
+
+</div>
+<button (click)="showModel()">子组件show model</button>
+
+<br>
+<hr>
+<br>
+

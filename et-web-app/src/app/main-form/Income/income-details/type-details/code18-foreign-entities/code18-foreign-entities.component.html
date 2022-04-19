@@ -1,0 +1,77 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="18. Foreign Entities"></app-subtitle>
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-4">
+        <h5>
+          Did you have either a direct or indirect interest in a controlled foreign company (CFC)?
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group">
+                <div class="custom-control custom-radio">
+                    <input type="radio" value="true" id="radio7" [(ngModel)]="retrievedSelfData.hasDirectOrInDirectInterestInCFC"  class="custom-control-input">
+                    <label class="custom-control-label" for="radio7">Yes</label>
+                 </div>
+                 <div class="custom-control custom-radio">
+                    <input type="radio" value="false" id="radio8" [(ngModel)]="retrievedSelfData.hasDirectOrInDirectInterestInCFC" class="custom-control-input">
+                    <label class="custom-control-label" for="radio8">No</label>
+                </div>
+        </div>
+      </div>
+        <!--/span-->                          
+        <!--/span-->
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-4">
+        <h5>
+          CFC income
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="cfcIncome" [(ngModel)]="retrievedSelfData.cfcIncome" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-4">
+        <h5>
+          Have you Ever, either directly or indirectly, caused the transfer of property (incl. money) or services to a non-resident trust estate?
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <div class="form-group">
+            <div class="custom-control custom-radio">
+              <input type="radio" value="true" id="radio9" name="nineRadio" [(ngModel)]="retrievedSelfData.hasCausedTransferOfPropertyOrServiceToNonResidentTrustEstate" class="custom-control-input">
+              <label class="custom-control-label" for="radio9">Yes</label>
+            </div>
+            <div class="custom-control custom-radio">
+              <input type="radio" value="false" id="radio10" name="nineRadio" [(ngModel)]="retrievedSelfData.hasCausedTransferOfPropertyOrServiceToNonResidentTrustEstate" class="custom-control-input">
+              <label class="custom-control-label" for="radio10">No</label>
+            </div>
+        </div>
+      </div>
+        <!--/span-->                          
+        <!--/span-->
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-4">
+        <h5>
+          Transferor trust income
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="" [(ngModel)]="retrievedSelfData.transferTrustIncome" class="edgeControl form-control">
+      </div>
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>

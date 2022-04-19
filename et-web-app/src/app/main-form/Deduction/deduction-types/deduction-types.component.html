@@ -1,0 +1,45 @@
+<button type="button" (click)="showModel()">show Model</button>
+<br>
+
+<div class="container-fluid">
+  <div class="row">
+      <p>
+          Based on your occupation, we have provided some possible deductions you could claim.
+      </p>
+  </div>
+
+  <ul class="ks-cboxtags">
+    <li *ngFor="let detail of defaultModel; let i = index">
+      <input [id]="detail['deductionTypeId']" type="checkbox" [(ngModel)]="defaultModel[i].checked">
+      <label style="margin:15px" [for]="detail['deductionTypeId']">{{detail.description}}</label>
+    </li>
+  </ul>
+
+  <div class="row">
+    <p>
+        See what other Occupation Name claimed for deductions
+    </p>
+  </div>
+  
+  <div class="row" style="padding:1em 3em">
+    <button (click)="onClick()" class="btn btn-block btn-rounded btn-primary">Show {{btnName1}}</button>
+  </div>
+
+  <div class="hiddenWrapper" id="hiddenWrapper" style="display: none">
+    <ul class="ks-cboxtags">
+      <li *ngFor="let detail of restModel; let i = index">
+        <input [id]="detail['deductionTypeId']" type="checkbox" [(ngModel)]="restModel[i].checked">
+        <label style="margin:15px" [for]="detail['deductionTypeId']">{{detail.description}}</label>
+      </li>
+    </ul>
+  </div>
+  <hr>
+
+  <div class="form-actions">
+    <div class="card-body">
+      <button routerLink="/dashboard" type="button" class="btn btn-dark">Back to dashboard</button>
+      <button (click)="onSubmit()" class="btn btn-success offset-md-2">Save and Continue</button>
+    </div>
+  </div>
+
+</div>

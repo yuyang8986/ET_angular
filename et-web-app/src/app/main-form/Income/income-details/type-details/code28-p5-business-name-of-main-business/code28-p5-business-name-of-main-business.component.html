@@ -1,0 +1,33 @@
+<div class="container-fluid">
+  <div class="row">
+    <app-subtitle mySubTitle="28(p5). Business name of main business and Australian business number"></app-subtitle>
+  </div>
+
+  <div class="row align-items-center">
+      <div class="col-md-4">
+        <h5>
+          Business name of main business
+        </h5>
+      </div>
+      <div class="col-md-5">
+        <input type="text" name="businessNameOfMainBusiness" [(ngModel)]="retrievedSelfData.businessNameOfMainBusiness" class="edgeControl form-control">
+      </div>
+  </div>
+
+  <div class="row align-items-center">
+    <div class="col-md-4">
+      <h5>
+        Australian business number
+      </h5>
+    </div>
+    <div class="col-md-5">
+      <input type="text" name="abn" [(ngModel)]="retrievedSelfData.abn" class="edgeControl form-control">
+    </div>
+  </div>
+
+</div>
+
+<button type="button" (click)="showModel()">show model</button>
+<br>
+<hr>
+<br>
